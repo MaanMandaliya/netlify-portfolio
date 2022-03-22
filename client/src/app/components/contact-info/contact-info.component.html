@@ -1,0 +1,32 @@
+<section class="text-center">
+    <section>
+        <span class="m-1">
+            <span [innerHTML]="contactInfo.phone_no.emoji | sanitizeHTML"></span>
+            <span class="ml-1" [textContent]="contactInfo.phone_no.value"></span>
+        </span>
+    </section>
+
+    <section>
+        <span class="m-1">
+            <span [ngStyle]="contactInfo.email_id.emoji_style" [innerHTML]="contactInfo.email_id.emoji | sanitizeHTML"></span>
+            <span class="ml-1">
+                <a [href]="'mailto:'+contactInfo.email_id.value"
+                [textContent]="contactInfo.email_id.value"></a>
+            </span>
+        </span>
+    </section>
+
+    <section>
+        <section *ngFor="let sites of contactInfo.websites" class="mt-4">
+            <div class="font-weight-bold" [textContent]="sites.labelKey | i18n"></div>
+            <div class="mt-1">
+                <span *ngFor="let site of sites.data" class="me-2 ms-2 d-inline-block">
+                    <a [href]="site.url" target="_blank">
+                        <img [alt]="site.name" [src]="'assets/icons/'+site.icon" 
+                        width="24" height="24">
+                    </a>
+                </span>
+            </div>
+        </section>
+    </section>
+</section>

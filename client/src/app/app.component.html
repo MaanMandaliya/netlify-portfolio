@@ -1,0 +1,25 @@
+<section>
+    <section *ngIf="isInitiated" class="main-container container">
+        <section class="row">
+            <section class="col-sm-12 col-md-12 col-lg-5 col-xl-4">
+                <section>
+                    <basic-info [data]="basicInfo"></basic-info>
+                </section>
+                <section class="mt-4">
+                    <contact-info [data]="contactInfo"></contact-info>
+                </section>
+
+            </section>
+            <section class="col-sm-12 col-md-12 col-lg-7 col-xl-8">
+                <section class="mx-5">
+                    <section class="mt-4">
+                        <bio-info [data]="bioInfo"></bio-info>
+                    </section>
+                    <section class="mt-4">
+                        <skills-info [data]="skillsInfo"></skills-info>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>

@@ -1,0 +1,10 @@
+<section>
+    <section class="d-flex">
+        <h3 class="font-weight-bold" [textContent]=" data.titleKey | i18n"></h3> 
+    </section>
+    <section class="mt-4">
+        <p *ngFor="let point of data.details">
+            <span [textContent]="point"></span>
+        </p>
+    </section>
+</section>

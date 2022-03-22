@@ -1,0 +1,31 @@
+<section id="basic-info">
+    <section class="d-flex flex-column justify-content-center">
+        <section class="d-flex justify-content-center">
+            <div class="profile-image-container p-4 pb-2">
+                <img alt="profile image" [src]="'assets/images/'+basicInfo.image" 
+                width="350" height="350" class="profile-image">
+            </div>
+        </section>
+        <section class="d-flex justify-content-center">
+            <h3 class="m-1 font-weight-bold"  *ngFor="let item of data.name.order" 
+                [textContent]="basicInfo.name[item]"></h3>
+        </section>
+        <section class="color-grey d-flex justify-content-center">
+            <span class="m-1 mr-3" *ngIf="basicInfo.gender">
+                <span [innerHTML]="basicInfo.gender.emoji | sanitizeHTML"></span>
+                <span class="ml-1" [textContent]="basicInfo.gender.value | i18n"></span>
+            </span>
+            
+            <span class="m-1 mr-3" *ngIf="basicInfo.pronouns">
+                <span [innerHTML]="basicInfo.pronouns.emoji | sanitizeHTML"></span>
+                <span class="ml-1" [textContent]="basicInfo.pronouns.value | i18n"></span>
+            </span>
+
+            <span class="m-1 ml-3" *ngIf="basicInfo.dob">
+                <span [innerHTML]="basicInfo.dob.emoji | sanitizeHTML"></span>
+                <span class="ml-1" [textContent]="basicInfo.dob.value"></span>    
+            </span>
+            
+        </section>
+    </section>
+</section>

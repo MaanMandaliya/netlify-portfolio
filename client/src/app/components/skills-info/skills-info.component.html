@@ -1,0 +1,28 @@
+<section>
+    <section class="d-flex">
+        <h3 class="font-weight-bold" [textContent]=" data.titleKey | i18n"></h3> 
+    </section>
+    <section class="mt-4" *ngFor="let skills of data.details">
+        <section class="text-center font-weight-bold">
+            <span [textContent]="(skills.labelKey | i18n)+(' ('+skills.skills.length+')')"></span>
+        </section>
+        <section class="clearfix d-flex flex-wrap justify-content-center mt-2">
+            <section *ngFor="let skill of skills.skills" class="d-flex flex-column p-2">
+                <section>
+                    <section class="skill-meter" [ngClass]="skill.style">
+                        <span>
+                            <img width="30" height="30" [src]="'assets/icons/'+skill.icon" />
+                        </span>
+                        <section class="slice">
+                            <section class="bar"></section>
+                            <section class="fill"></section>
+                        </section>
+                    </section>    
+                </section>
+                <section class="text-center">
+                    <span [textContent]="skill.name"></span>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
