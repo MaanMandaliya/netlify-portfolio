@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  basePath: "data/",
-  profilePath: "profile_info.json",
-  i18nKeyStorePath: "i18n_keystore.json"
+  basePath: "https://www.demoportfolio2.netlify.app/functions/",
+  profilePath: "profile-data",
+  i18nKeyStorePath: "i18n_keystore"
 };
