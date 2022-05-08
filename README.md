@@ -1,4 +1,4 @@
-# netlify-profile-starter
+# Netlify Portfolio Website using React.js
 
  1. Creating a GitHub repository by Use this template feature of the
     GitHub 
